@@ -191,17 +191,16 @@ aside div{
     flex-wrap: wrap;
 }
 .item{
-    flex: 1 1 20em;
+    flex: 1 1 25em;
 }
 .carousel{
     /* background-color: burlywood; */
     align-items: center;
-    width: 40%;
+    /* width: 40%; */
     height: 50vh;
     position: relative;
     /* margin: 0 auto; */
     margin-bottom: 1em;
-    
 }
 .container{
     /* background-color: lightgreen; */
@@ -263,7 +262,10 @@ aside div{
     width: 60%;
     margin-left: 2em;
 }
-.tag-info{display: flex; margin-bottom: 2em; }
+.tag-info{display: flex; margin-bottom: 2em; flex-wrap: wrap;}
+.tag-info > p {
+    flex: 1 1 50%;
+}
 .tag{width: 30%; margin: 0; font-weight: 700; letter-spacing: 1px;}
 .hola{width: 70%; margin: 0;}
 
@@ -420,7 +422,7 @@ aside div{
     }
 }
 
-@media screen and (max-width: 769px){
+@media screen and (max-width: 850px){
     /* ASIDE */
     .titulo{
         font-size: 100%;
@@ -434,7 +436,17 @@ aside div{
     aside {
         width: 45%;
     }
+    /* PROJECTS */
+    .carousel{
+        margin-bottom: 3em;
+    }
+    .info-gallery{
+        margin-bottom: 3em;
+        margin-left: 2em;
+    }
+    
 }
+
 @media screen and (max-width: 767px){
     /* INDEX */
     .wrapper {
@@ -471,6 +483,10 @@ aside div{
         padding-right: 8em;
         padding-left: 8em;
     }
+     /* PROJECTS */
+    .info-gallery{
+        margin-left: 0em;
+    }
 }
 @media screen and (max-width: 450px){
     /* INDEX */
@@ -488,6 +504,21 @@ aside div{
     }
     .about-me .titulo{
         font-size: 150%;
+    }
+    /* PROJECTS */
+    .portfolio{
+        margin: 4em 2em;
+    }
+    .carousel{
+        /* background-color: burlywood; */
+        /* width: 100%; */
+        height: 50vh;
+    }
+    .left{
+        left: 0em;
+    }
+    .right{
+        right: 0em;
     }
 }
 @media screen and (max-width: 300px){
@@ -508,5 +539,12 @@ aside div{
     }
     .about-photo{
         display: none;
+    }
+}
+
+
+@media screen and (width: 1024px) and (height: 1366px){
+    .item{
+        flex: 1 1 30em;
     }
 }
